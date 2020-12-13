@@ -1,0 +1,47 @@
+
+------------Klienstől elérhető request---------------
+
+	- http://localhost:8080/get/1
+
+
+------------CRUD "közvetlen a szerverhez"------------
+
+#CREATE:
+	-(POST) http://localhost:9090/create
+{
+    "id": 2,
+    "myData": "my-data2",
+    "entityTwoList": [
+        {
+            "id": 2,
+            "myTime": "2020-03-03T00:00:00",
+            "myString": "string2",
+            "myBoolean": true
+        }
+    ]
+}
+
+#READ
+	-(GET) http://localhost:9090/read/1
+
+
+
+#UPDATE
+	-(PUT) http://localhost:9090/update/1
+
+{
+    "id": 2,
+    "myData": "my-data2 updated",
+    "entityTwoList": [
+        {
+            "id": 2,
+            "myTime": "2020-03-03T00:00:00",
+            "myString": "string2 updated",
+            "myBoolean": false
+        }
+    ]
+}
+
+
+#DELETE
+	-(DELETE) http://localhost:9090/delete/1

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <CustomLevels>
+        <CustomLevel name="CHECK" intLevel="50" />
+    </CustomLevels>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-7level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="logFile" fileName="C://logfile//app.log">
+            <PatternLayout pattern="%d %-7level - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="logFile" level="check" />
+        </Root>
+    </Loggers>
+</Configuration>
